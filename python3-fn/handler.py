@@ -2,7 +2,7 @@ import requests
 
 
 def handle(req):
-    url = "http://api.openweathermap.org/data/2.5/weather?q=Santiago&appid=02f431d0b81013512efe09a7de94b50e&units=metric"
+    url = "http://api.openweathermap.org/data/2.5/weather?q=Santiago&appid={{apikey}}&units=metric"
     #url para obtener el clima de Santiago
     payload={}
     headers = {}
@@ -16,7 +16,7 @@ def handle(req):
 
     #print(f"La temperatura de {ciudad} es de {temperatura} grados")
 
-    url1 = "http://api.cmfchile.cl/api-sbifv3/recursos_api/uf?apikey=8554a65077f9b0080a615964cb3865abb6baa5d1&formato=json"
+    url1 = "http://api.cmfchile.cl/api-sbifv3/recursos_api/uf?apikey={{apikey}}&formato=json"
     #url para obtener el valor de la UF
     payload1={}
     headers1 = {}
@@ -27,7 +27,7 @@ def handle(req):
 
     #print(f"El valor de la UF actualmente es de {valoruf1} CLP")
 
-    url3 = "http://api.cmfchile.cl/api-sbifv3/recursos_api/dolar?apikey=8554a65077f9b0080a615964cb3865abb6baa5d1&formato=json"
+    url3 = "http://api.cmfchile.cl/api-sbifv3/recursos_api/dolar?apikey={{apikey}}&formato=json"
     #url para obtener el valor del dolar
     payload3={}
     headers3 = {}
